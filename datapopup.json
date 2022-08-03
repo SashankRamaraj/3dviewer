@@ -1,10 +1,10 @@
 [
-  {"x": 1, "y": 8, "z": 0, "size": 1, "color": "#ff0000", "label": "Credit Analytics"},
-  {"x": 2, "y": 7, "z": 7, "size": 1.5, "color": "#0000ff", "label": "Financial Risk Analytics"},
-  {"x": 1, "y": 6, "z": 3, "size": 1, "color": "#4CC3D9", "label": "Data Visualization"},
-  {"x": 3, "y": 4, "z": 1, "size": 1.5, "color": "#EF2D5E", "label": "Research Advisory Speciality Solutions"},
+  {"x": 1, "y": 10, "z": 4, "size": 1, "color": "#ff0000", "label": "Credit Analytics"},
+  {"x": 7, "y": 9, "z": 7, "size": 1.5, "color": "#0000ff", "label": "Financial Risk Analytics"},
+  {"x": 6, "y": 9, "z": 3, "size": 1, "color": "#4CC3D9", "label": "Data Visualization"},
+  {"x": 9, "y": 4, "z": 10, "size": 1.5, "color": "#EF2D5E", "label": "Research Advisory Speciality Solutions"},
   {"x": 2, "y": 1, "z": 5, "size": 1, "color": "#ff0000", "label": "Network & Regulatory Solutions"},
-  {"x": 1, "y": 10, "z": 6, "size": 1.5, "color": "#00ff00", "label": "Software Solutions"},
+  {"x": 1, "y": 5, "z": 10, "size": 1.5, "color": "#00ff00", "label": "Software Solutions"},
   {"x": 3, "y": 5, "z": 0, "size": 1, "color": "#ff0000", "label": "Digital"},
   {"x": 5, "y": 9, "z": 1, "size": 1, "color": "#0000ff", "label": "Commodity Insights"},
   {"x": 6, "y": 4, "z": 10, "size": 1.5, "color": "#0000ff", "label": "ESG"}

@@ -8,7 +8,8 @@
     <a-scene background="color: grey">
         <!-- Aframe light -->
         <a-light type="point" intensity="1" position="-2 10 10"></a-light>
-
+        <a-entity oculus-touch-controls="hand: left"></a-entity>
+        <a-entity oculus-touch-controls="hand: right"></a-entity>
         <!-- Declaring chart component -->
         <a-entity charts="type: bar; dataPoints:./datapopup.json; axis_text_color: black; show_popup_info: true"></a-entity>
 

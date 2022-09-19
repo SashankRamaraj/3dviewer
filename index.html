@@ -38,10 +38,10 @@
               <!-- Declaring chart component -->
 		<a-entity id="barId"            charts="type: bar;      dataPoints: #data" scale="0.5 0.5 0.5" position="-5 0 -15" rotation="0 0 0"></a-entity>
 		
-		<a-entity charts='type: totem;  entity_id_list: barId; dataPoints_list: {"2021": "./data.json", "2022": [{"x": 1, "y": 8, "z": 0, "size": 1, "color": "#ff0000"}]}' scale="0.8 0.8 0.8" position="5 2 -12" rotation="0 0 0">
+		<a-entity data-clickable charts='type: totem;  entity_id_list: barId; dataPoints_list: {"2021": "./data.json", "2022": [{"x": 1, "y": 8, "z": 0, "size": 1, "color": "#ff0000"}]}' scale="0.8 0.8 0.8" position="5 2 -12" rotation="0 0 0">
 		</a-entity>
 		
-		<a-entity id="currentChart"  scale="0.8 0.8 0.8" position="8 2 -12"></a-entity>
+		<a-entity id="currentChart" data-clickable  scale="0.8 0.8 0.8" position="8 2 -12"></a-entity>
 		<!-- CHART ENDS-->>  	
       
   <a-entity position="-3 1 -6" rotation="5 0 0">

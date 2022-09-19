@@ -18,7 +18,7 @@
 </head>
 <body>
     <!-- Aframe scene -->
-    <a-scene cursor="rayOrigin:mouse">
+    <a-scene>
 	
   <a-assets> 
     <img id="pink" src="https://img.gs/bbdkhfbzkk/stretch/http://i.imgur.com/1hyyIUi.jpg" crossorigin="anonymous" />
@@ -38,10 +38,15 @@
               <!-- Declaring chart component -->
 		<a-entity id="barId"            charts="type: bar;      dataPoints: #data" scale="0.5 0.5 0.5" position="-5 0 -15" rotation="0 0 0"></a-entity>
 		
-		<a-entity data-clickable charts='type: totem;  entity_id_list: barId; dataPoints_list: {"2021": "./data.json", "2022": [{"x": 1, "y": 8, "z": 0, "size": 1, "color": "#ff0000"}]}' scale="0.8 0.8 0.8" position="5 2 -12" rotation="0 0 0">
+				<a-entity data-clickable charts='type: totem;  entity_id_list: barId; dataPoints_list: {"2021": "./data.json", "2022": [{"x": 1, "y": 8, "z": 0, "size": 1, "color": "#ff0000"}]}' scale="0.8 0.8 0.8" position="5 2 -12" rotation="0 0 0">
+		 <a-animation begin="click" attribute="position" from="0 0 0"
+                   to="0 0 -10" dur="2000" fill="both"></a-animation>
 		</a-entity>
 		
-		<a-entity id="currentChart" data-clickable  scale="0.8 0.8 0.8" position="8 2 -12"></a-entity>
+				<a-entity id="currentChart" data-clickable  scale="0.8 0.8 0.8" position="8 2 -12">
+		      <a-animation begin="click" attribute="position" from="0 0 0"
+                   to="0 0 -10" dur="2000" fill="both"></a-animation>
+    </a-entity>
 		<!-- CHART ENDS-->>  	
       
   <a-entity position="-3 1 -6" rotation="5 0 0">
@@ -68,18 +73,20 @@
         <!-- Aframe camera -->
   <a-entity id="rig">
     <a-camera look-controls position="0 1.6 -3" id="user-cam" >
-	<a-entity cursor="fuse: true; fuseTimeout: 500"
-        position="0 0 -1"
-        geometry="primitive: ring; radiusInner: 0.02; radiusOuter: 0.03"
-        material="color: black; shader: flat">
-  </a-entity>
+<a-entity position="0 0 -3"
+                geometry="primitive: ring; radiusInner: 0.02; radiusOuter: 0.03;"
+                material="color: black; shader: flat"
+                cursor="maxDistance: 30; fuse: true">
+        <a-animation begin="click" easing="ease-in" attribute="scale"
+             fill="forwards" from="0.2 0.2 0.2" to="1 1 1" dur="150"></a-animation>
+        <a-animation begin="fusing" easing="ease-in" attribute="scale"
+             fill="backwards" from="1 1 1" to="0.2 0.2 0.2" dur="1500"></a-animation>
+      </a-entity>
+  
 	</a-camera>
     <a-entity oculus-touch-controls="hand: left" ></a-entity>
     <a-entity oculus-touch-controls="hand: right" oculus-thumbstick-controls></a-entity>
   </a-entity>
-  <a-entity id="mouseCursor" cursor="rayOrigin: mouse" raycaster="objects: [data-clickable]"></a-entity>
-      <a-entity id="leftHand" laser-controls="hand: left" raycaster="objects: [data-clickable]"></a-entity>
-      <a-entity id="rightHand" laser-controls="hand: right" raycaster="objects: [data-clickable]"></a-entity>
     </a-scene>
 	    
     </a-scene>
